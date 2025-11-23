@@ -1,0 +1,24 @@
+name: Run execute.sh
+
+on:
+  push:
+    branches:
+      - main  # or your branch name
+  workflow_dispatch:   # allows manual trigger
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Convert line endings (Windows -> Unix)
+        run: dos2unix ./execute.sh
+
+      - name: Make script executable
+        run: chmod +x ./execute.sh
+
+      - name: Run execute.sh
+        run: bash ./execute.sh
