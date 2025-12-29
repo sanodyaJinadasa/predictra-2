@@ -14,4 +14,4 @@ echo "$price" > bitcoin_price.txt
 
 
 
-.
+./
