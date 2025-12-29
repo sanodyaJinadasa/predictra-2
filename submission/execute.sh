@@ -12,3 +12,6 @@ echo "$price"
 # Save the price to a file
 echo "$price" > bitcoin_price.txt
 
+
+
+.
